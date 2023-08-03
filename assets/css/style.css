@@ -1,0 +1,1679 @@
+/* fontlar */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none;
+  resize: none;
+  border: none;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --green: #27ae60;
+  --black: #192a56;
+  --light-color: #666;
+  --kolge-effekti: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+  --icon-color: #eee;
+}
+
+/* search inputun x butonunu gizletmek */
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+textarea::-webkit-scrollbar {
+  width: 0;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /* Customize the scrollbar color */
+  border-radius: 10px;
+}
+
+section:nth-child(even) {
+  background-color: #efefef;
+}
+
+.heading {
+  color: var(--black);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+.sub-heading {
+  color: var(--green);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.btn {
+  border-radius: 2rem;
+  padding: 1rem;
+  background-color: var(--black);
+  color: white;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: var(--green);
+}
+
+.error-message {
+  color: red;
+  font-size: 13px;
+  display: none;
+  padding-bottom: 10px;
+}
+
+/* HEADER */
+
+header .header-section .fa-bars {
+  display: none;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  -webkit-box-shadow: var(--kolge-effekti);
+          box-shadow: var(--kolge-effekti);
+  z-index: 9999999;
+  background-color: #ffffffe3;
+}
+
+header .header-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0;
+  will-change: transform;
+}
+
+header .header-section #logo {
+  font-size: 1.5rem;
+  color: var(--green);
+  font-weight: 700;
+}
+
+header .header-section #logo i {
+  margin-right: 0.6rem;
+}
+
+header .header-section nav a {
+  color: var(--black);
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 3rem;
+  display: inline-block;
+  font-weight: 700;
+}
+
+header .header-section nav a:hover {
+  color: #fff;
+  background-color: var(--green);
+  -webkit-transform: translateY(-1rem);
+      -ms-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+header .header-section .icons i {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+header .header-section .icons i:hover {
+  background-color: var(--green);
+  color: white;
+  -webkit-transform: translateY(-1rem);
+      -ms-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+/* Add the styles for the active link */
+.header-section .navbar a.active {
+  background-color: var(--green);
+  color: #fff;
+}
+
+/* HEADER */
+
+/* FORM */
+
+#search-form {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 9999999;
+  top: -110%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 3rem;
+}
+
+#search-form.active {
+  top: 0;
+}
+
+#search-form #search-box {
+  width: 50rem;
+  background: none;
+  font-size: 3rem;
+  border-bottom: 0.1rem solid #fff;
+  padding: 0.5rem 0;
+  color: #fff;
+}
+
+#search-form #search-box::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 3rem;
+}
+
+#search-form #search-box::-moz-placeholder {
+  color: #fff;
+  font-size: 3rem;
+}
+
+#search-form #search-box:-ms-input-placeholder {
+  color: #fff;
+  font-size: 3rem;
+}
+
+#search-form #search-box::-ms-input-placeholder {
+  color: #fff;
+  font-size: 3rem;
+}
+
+#search-form #search-box::placeholder {
+  color: #fff;
+  font-size: 3rem;
+}
+
+#overlay-search {
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+#close {
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  color: #fff;
+  font-size: 3rem;
+}
+
+/* FORM */
+
+/* HOME SECTION */
+
+.home-slider .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 3rem 0;
+}
+
+.home-slider .slide .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  text-align: center;
+}
+
+.home-slider .content p {
+  color: var(--light-color);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+/* .home-slider .content a{} */
+
+.home-slider .slide .home-slider-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30rem;
+          flex: 1 1 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-slider .slide img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-slider .slide img:hover {
+  -webkit-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--green) !important;
+}
+
+/* HOME SECTION */
+
+/* DISHES SECTION */
+
+.meal-cards-gallery {
+  padding: 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+}
+
+.meal-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 3rem;
+  min-width: 350px;
+}
+
+.meal-card img {
+  width: 100%;
+}
+
+.meal-card .fa-solid.fa-heart,
+.meal-card .fa-solid.fa-eye {
+  color: var(--black);
+  position: absolute;
+  top: 1rem;
+  background-color: #eeee;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.meal-card .fa-solid.fa-heart {
+  right: -5rem;
+}
+
+.meal-card .fa-solid.fa-eye {
+  left: -5rem;
+}
+
+.meal-card:hover .fa-solid.fa-heart {
+  right: 1.5rem;
+}
+
+.meal-card:hover .fa-solid.fa-eye {
+  left: 1.5rem;
+}
+
+.meal-card .fa-solid.fa-heart:hover,
+.meal-card .fa-solid.fa-eye:hover {
+  background-color: var(--green);
+  color: #ffff;
+}
+
+.card-heading {
+  color: var(--black);
+}
+
+.stars {
+  padding: 0.7rem 0;
+}
+
+.stars i {
+  color: var(--green);
+}
+
+.card-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-order span {
+  font-size: 1.5rem;
+  color: var(--green);
+  font-weight: 500;
+  padding-right: 1rem;
+}
+
+/* DISHES SECTION */
+
+/* ABOUT SECTION */
+
+about-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about-section-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5rem 3rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about-section-left {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.about-section-left img {
+  width: 100%;
+}
+
+.about-section-right {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+}
+
+.about-section-right h1 {
+  text-align: left;
+  padding: 0;
+}
+
+.about-section-right p {
+  padding: 1rem 0;
+}
+
+.about-features {
+  padding: 2rem 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about-features,
+.about-features span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-features span {
+  font-weight: 500;
+  background-color: #eee;
+  width: 220px;
+  height: 70px;
+  border-radius: 2rem;
+  margin-right: 1rem;
+}
+
+.about-features span i {
+  font-size: 2rem;
+  margin-right: 0.7rem;
+}
+
+.about-section-right .btn {
+  padding: 1rem 2rem;
+}
+
+/* ABOUT SECTION */
+
+/* MENU-SECTION */
+
+.menu-section .meal-card {
+  width: 400px;
+  padding: 1rem;
+  border-radius: 2rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: justify;
+}
+
+.menu-section .meal-card img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu-section .meal-card p {
+  padding: 1rem 0;
+}
+
+.menu-section .meal-card .card-order span {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  padding: 0 0 0 1rem;
+}
+
+.menu-section .meal-card .fa-solid.fa-heart {
+  top: 1.5rem;
+}
+
+.meal-card:hover .fa-solid.fa-heart {
+  right: 1.5rem;
+}
+
+/* MENU-SECTION */
+
+/* REVIEW SECTION */
+
+.review-section .container {
+  padding: 0 2rem;
+}
+
+.review-section .swiper.review-slider {
+  padding: 3rem 0;
+}
+
+.testimonial-card {
+  position: relative;
+  border: 3px solid #eee;
+  border-radius: 1rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  /* width: 410px; */
+  padding: 2rem 1rem;
+}
+
+.testimonial-card,
+.testimonial-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.testimonial-card-upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.testimonial-card-upper img {
+  width: 20%;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.testimonial-card-upper .fa-solid.fa-quote-left {
+  position: absolute;
+  top: 0.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  opacity: 70%;
+}
+
+.testimonial-card-lower p {
+  padding-top: 2rem;
+}
+
+/* REVIEW SECTION */
+
+/* ORDER SECTION */
+
+.order-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 500;
+}
+
+.form-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  border-radius: 2rem;
+}
+
+.order-form-card input,
+.order-form-card textarea {
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.order-form-card {
+  max-width: 880px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 4rem 2.5rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  /* Optional: Add a subtle box shadow */
+}
+
+.left-column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px;
+  max-width: 400px;
+}
+
+.right-column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0.625rem;
+  max-width: 400px;
+}
+
+.form-container label,
+.form-container input,
+.form-container textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form-container .btn {
+  position: absolute;
+  width: 150px;
+  cursor: pointer;
+  left: 0.75rem;
+}
+
+/* ORDER SECTION */
+
+/* FOOTER */
+
+footer,
+footer .upper-footer,
+footer .lower-footer,
+.footer-links-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .upper-footer {
+  padding: 2rem;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer-links-row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-row-heading {
+  color: var(--black);
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.footer-links-row a,
+.footer-links-row p {
+  color: var(--light-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 3rem;
+  height: 52px;
+
+  -webkit-box-pack: center;
+
+      -ms-flex-pack: center;
+
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-links-row a {
+  width: 280px;
+}
+
+.footer-links-row a:hover {
+  color: #fff;
+  background-color: var(--green);
+  -webkit-transform: translateX(0.5rem);
+      -ms-transform: translateX(0.5rem);
+          transform: translateX(0.5rem);
+  text-align: center;
+}
+
+footer .lower-footer {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+
+  font-weight: 500;
+  border-top: 3px solid #eee;
+  padding: 3rem;
+}
+
+.footer .lower-footer a {
+  color: var(--green);
+  font-weight: 700;
+}
+
+/* FOOTER */
+
+/* LOADER */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000000000;
+  background: #fffafc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.loader-container img {
+  width: 35rem;
+}
+
+.loader-container.fade-out {
+  top: 110%;
+  opacity: 0;
+}
+
+/* LOADER */
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1100px) {
+  header .header-section .icons .fa-bars {
+    display: inline-block;
+  }
+
+  header .header-section .navbar {
+    display: none;
+    position: absolute;
+    top: 130%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  header .header-section .navbar.active {
+    display: block;
+  }
+
+  header .header-section .navbar a {
+    display: block;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    background-color: #eee;
+  }
+
+  header .header-section nav a:hover {
+    -webkit-transform: translateX(1rem);
+        -ms-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  /* HEADER */
+
+  header .header-section #logo {
+    font-size: 0.85rem;
+  }
+
+  header .header-section .icons i {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  /* HEADER */
+
+  /* SEARCH-FORM */
+
+  #search-form {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #search-form #search-box {
+    width: 13rem;
+  }
+  #search-form #search-box::-webkit-input-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box::-moz-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box:-ms-input-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box::-ms-input-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box::placeholder {
+    font-size: 2rem;
+  }
+
+  #overlay-search {
+    font-size: 1.5rem;
+  }
+
+  /* SEARCH-FORM */
+
+  /* HOME */
+
+  .home-slider-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2rem 0;
+  }
+
+  .home-slider .slide img {
+    width: 70%;
+  }
+
+  /* HOME */
+
+  /* DISHES SECTION */
+  .meal-cards-gallery {
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+  }
+
+  .meal-card {
+    min-width: 0px;
+  }
+  .meal-card {
+    padding: 3rem 2rem;
+  }
+
+  .card-order span {
+    font-size: 1.5rem;
+  }
+
+  /* DISHES SECTION */
+
+  /* ABOUT SECTION */
+
+  .about-features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-section-content {
+    padding: 2rem 1rem;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .about-section-left,
+  .about-section-right {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+
+  .about-section-right {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .about-section-right h1 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .about-features {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1.5rem;
+  }
+  /* ABOUT SECTION */
+
+  /* MENU SECTION */
+
+  .menu-section .meal-card {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+
+  /* MENU SECTION */
+
+  /* REVIEW SECTION */
+
+  .testimonial-card-upper img {
+    width: 32%;
+  }
+
+  .card-heading {
+    font-size: 1.2rem;
+  }
+
+  .testimonial-card-upper .fa-solid.fa-quote-left {
+    font-size: 2.2rem;
+    top: 0;
+    right: 1rem;
+  }
+
+  /* REVIEW SECTION */
+
+  /* ORDER SECTION */
+  .order-form-card {
+    text-align: center;
+  }
+
+  .form-container .btn {
+    left: 2.8125rem;
+  }
+  /* ORDER SECTION */
+
+  /* FOOTER */
+
+  footer .upper-footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer-links-row:not(:last-child) {
+    padding-bottom: 5rem;
+  }
+
+  footer .lower-footer {
+    padding: 3rem 0rem;
+  }
+  /* FOOTER */
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  /* HEADER */
+
+  header .header-section #logo {
+    font-size: 1.2rem;
+  }
+
+  header .header-section .icons i {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  /* HEADER */
+
+  /* SEARCH-FORM */
+
+  #search-form {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #search-form #search-box {
+    width: 13rem;
+  }
+  #search-form #search-box::-webkit-input-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box::-moz-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box:-ms-input-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box::-ms-input-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box::placeholder {
+    font-size: 2rem;
+  }
+
+  #overlay-search {
+    font-size: 1.5rem;
+  }
+
+  /* SEARCH-FORM */
+
+  /* HOME */
+
+  .home-slider-image {
+    padding: 2rem 0;
+  }
+
+  .home-slider .slide img {
+    width: 75%;
+  }
+
+  /* HOME */
+
+  /* DISHES SECTION */
+
+  .meal-card {
+    min-width: 0px;
+  }
+  .meal-card {
+    padding: 3rem 2rem;
+  }
+
+  .card-order span {
+    font-size: 1.5rem;
+  }
+
+  /* DISHES SECTION */
+
+  /* ABOUT SECTION */
+
+  .about-features span {
+    margin-right: 0;
+  }
+  .about-section-content {
+    padding: 2rem 1rem;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .about-section-left,
+  .about-section-right {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+
+  .about-section-right {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .about-section-right .heading {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .about-features {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1.5rem;
+  }
+  /* ABOUT SECTION */
+
+  /* MENU SECTION */
+
+  .menu-section .meal-card {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+
+  /* MENU SECTION */
+
+  /* REVIEW SECTION */
+
+  .testimonial-card-upper img {
+    width: 32%;
+  }
+
+  .card-heading {
+    font-size: 1.2rem;
+  }
+
+  .testimonial-card-upper .fa-solid.fa-quote-left {
+    font-size: 2.2rem;
+    top: 0;
+    right: 1rem;
+  }
+
+  /* REVIEW SECTION */
+
+  /* ORDER SECTION */
+  .order-form-card {
+    text-align: center;
+  }
+
+  .form-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .form-container .btn {
+    left: 7rem;
+  }
+  /* ORDER SECTION */
+
+  /* FOOTER */
+
+  footer .upper-footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer-links-row:not(:last-child) {
+    padding-bottom: 5rem;
+  }
+
+  footer .lower-footer {
+    padding: 3rem 0rem;
+  }
+  /* FOOTER */
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    padding: 1.5rem;
+  }
+
+  .sub-heading {
+    font-size: 2rem;
+  }
+
+  /* HEADER */
+
+  header .header-section #logo {
+    font-size: 1.5rem;
+  }
+
+  header .header-section .icons i {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+
+  /* HEADER */
+
+  /* SEARCH-FORM */
+
+  #search-form #search-box {
+    width: 80%;
+  }
+  #search-form #search-box::-webkit-input-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box::-moz-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box:-ms-input-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box::-ms-input-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box::placeholder {
+    font-size: 2rem;
+  }
+
+  #overlay-search {
+    font-size: 1.5rem;
+  }
+
+  /* SEARCH-FORM */
+
+  /* HOME */
+
+  .home-slider-image {
+    padding: 2.5rem 0;
+  }
+
+  .home-slider .slide img {
+    width: 80%;
+  }
+
+  /* HOME */
+
+  /* DISHES SECTION */
+
+  .meal-card {
+    width: 75%;
+  }
+
+  .meal-card .card-heading {
+    font-size: 2rem;
+    padding-top: 1rem;
+  }
+
+  .meal-card .stars i {
+    font-size: 1.5rem;
+  }
+  .meal-card .card-text {
+    font-size: 1.3rem;
+  }
+  .meal-card .stars {
+    padding: 2rem 0;
+  }
+
+  .card-order span {
+    font-size: 2rem;
+  }
+
+  /* DISHES SECTION */
+
+  /* ABOUT SECTION */
+
+  .about-features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-section-content {
+    padding: 2rem 1rem;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .about-section-left,
+  .about-section-right {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+
+  .about-section-right {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .about-section-right h1 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .about-section-right p {
+    font-size: 1.5rem;
+  }
+
+  .about-features {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .about-features span {
+    width: 350px;
+    height: 100px;
+    margin-right: 0;
+    font-size: 1.5rem;
+  }
+
+  .about-section-right .btn {
+    padding: 2rem 3rem;
+    font-size: 1.5rem;
+  }
+
+  /* ABOUT SECTION */
+
+  /* MENU SECTION */
+
+  .menu-section .meal-card {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 75%;
+  }
+
+  /* MENU SECTION */
+
+  /* REVIEW SECTION */
+
+  .testimonial-card {
+    min-height: 13.25rem;
+  }
+
+  .testimonial-card-upper img {
+    width: 32%;
+  }
+
+  .testimonial-card-upper .fa-solid.fa-quote-left {
+    font-size: 2.2rem;
+    top: 0;
+    right: 1rem;
+  }
+
+  /* REVIEW SECTION */
+
+  /* ORDER SECTION */
+  .order-form-card {
+    text-align: center;
+  }
+
+  .form-container .btn {
+    left: 13rem;
+  }
+  /* ORDER SECTION */
+
+  /* FOOTER */
+
+  footer .upper-footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer-row-heading {
+    font-size: 3rem;
+  }
+
+  .footer-links-row:not(:last-child) {
+    padding-bottom: 5rem;
+  }
+
+  footer .lower-footer {
+    font-size: 1.5rem;
+  }
+
+  .footer-links-row a {
+    font-size: 1.3rem;
+  }
+  /* FOOTER */
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .btn {
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .sub-heading {
+    font-size: 2.5rem;
+  }
+
+  /* HEADER */
+
+  header .header-section #logo {
+    font-size: 2rem;
+  }
+
+  header .header-section .icons i {
+    font-size: 2.3rem;
+    padding: 0.5rem;
+  }
+
+  /* HEADER */
+
+  /* SEARCH-FORM */
+
+  #search-form #search-box {
+    width: 80%;
+  }
+  #search-form #search-box::-webkit-input-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box::-moz-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box:-ms-input-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box::-ms-input-placeholder {
+    font-size: 2rem;
+  }
+  #search-form #search-box::placeholder {
+    font-size: 2rem;
+  }
+
+  #overlay-search {
+    font-size: 1.5rem;
+  }
+
+  /* SEARCH-FORM */
+
+  /* HOME */
+
+  .home-slider-image {
+    padding: 3rem 0;
+  }
+
+  .home-slider .slide img {
+    width: 85%;
+  }
+
+  /* HOME */
+
+  /* DISHES SECTION */
+
+  .meal-card {
+    width: 80%;
+  }
+
+  .meal-card .card-heading {
+    font-size: 2.5rem;
+    padding-top: 1rem;
+  }
+
+  .meal-card .stars i {
+    font-size: 1.7rem;
+  }
+  .meal-card .card-text {
+    font-size: 1.5rem;
+  }
+  .meal-card .stars {
+    padding: 2rem 0;
+  }
+
+  .card-order span {
+    font-size: 3rem;
+  }
+
+  /* DISHES SECTION */
+
+  /* ABOUT SECTION */
+
+  .about-features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-section-content {
+    padding: 2rem 1rem;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .about-section-left,
+  .about-section-right {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+
+  .about-section-right {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .about-section-right h1 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .about-section-right p {
+    font-size: 1.5rem;
+  }
+
+  .about-features {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .about-features span {
+    width: 350px;
+    height: 100px;
+    margin-right: 0;
+    font-size: 1.5rem;
+  }
+
+  .about-section-right .btn {
+    padding: 2rem 3rem;
+    font-size: 1.5rem;
+  }
+
+  /* ABOUT SECTION */
+
+  /* MENU SECTION */
+
+  .menu-section .meal-card {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 75%;
+  }
+
+  /* MENU SECTION */
+
+  /* REVIEW SECTION */
+
+  .testimonial-card {
+    min-height: 13.25rem;
+  }
+
+  .testimonial-card-upper img {
+    width: 32%;
+  }
+
+  .testimonial-card-upper .fa-solid.fa-quote-left {
+    font-size: 2.2rem;
+    top: 0;
+    right: 1rem;
+  }
+
+  /* REVIEW SECTION */
+
+  /* ORDER SECTION */
+  .order-form-card {
+    text-align: center;
+  }
+
+  .form-container .btn {
+    padding: 1rem;
+    left: 17rem;
+  }
+  /* ORDER SECTION */
+
+  /* FOOTER */
+
+  footer .upper-footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer-row-heading {
+    font-size: 3rem;
+  }
+
+  .footer-links-row:not(:last-child) {
+    padding-bottom: 5rem;
+  }
+
+  footer .lower-footer {
+    font-size: 1.5rem;
+  }
+
+  .footer-links-row a {
+    font-size: 1.3rem;
+  }
+  /* FOOTER */
+}
+
+/* For screens with a width greater than or equal to 1025px */
+@media screen and (min-width: 1025px) {
+  /* CSS rules for larger desktops and monitors in landscape mode */
+}
+
+/* RESPONSIVE DESIGN */

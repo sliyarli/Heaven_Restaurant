@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resto.</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="shortcut icon" href="assets/site-logo.svg" type="image/x-icon" />
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- swiper js paketinin css-i -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- sweet alert paketinin css-i -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+
+</head>
+
+<body>
+  <header>
+    <section class="header-section">
+      <a href="#home" id="logo"><i class="fa-solid fa-drumstick-bite fa-beat-fade" style="color: #0eaf36"></i>Heaven
+        Restaurant</a>
+      <nav class="navbar">
+        <a href="#home" class="nav-link">Əsas səhifə</a>
+        <a href="#dishes" class="nav-link">Yeməklər</a>
+        <a href="#about" class="nav-link">Haqqımızda</a>
+        <a href="#menu" class="nav-link">Menyu</a>
+        <a href="#review" class="nav-link">Rəy</a>
+        <a href="#order" class="nav-link">Sifariş</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fa-solid fa-bars" id="navbar-bars"></i>
+        <i class="fa-solid fa-magnifying-glass" id="search-form-open"></i>
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+    </section>
+  </header>
+  <form action="" id="search-form" class="">
+    <input type="search" placeholder="Axtar" id="search-box" />
+    <i class="fa-solid fa-magnifying-glass" id="overlay-search"></i>
+    <i class="fa-solid fa-xmark" id="close"></i>
+  </form>
+  <section class="home-section" id="home">
+    <div class="container">
+      <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide">
+            <div class="content">
+              <h1 class="heading">Bizim dadlı təamlar</h1>
+              <h3 class="sub-heading">Ədviyyatlı təamlar</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Error at nemo libero. Praesentium, dolores? Non totam quas
+                illo ipsa, quidem, possimus optio quaerat suscipit magni
+                molestiae ab maiores illum ea.
+              </p>
+              <a href="#order" class="btn">Sifariş ver</a>
+            </div>
+            <div class="home-slider-image">
+              <img src="assets/images/home-img-2.png" alt="" />
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="content">
+              <h1 class="heading">Bizim dadlı təamlar</h1>
+              <h3 class="sub-heading">Ədviyyatlı təamlar</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Error at nemo libero. Praesentium, dolores? Non totam quas
+                illo ipsa, quidem, possimus optio quaerat suscipit magni
+                molestiae ab maiores illum ea.
+              </p>
+              <a href="#order" class="btn">Sifariş ver</a>
+            </div>
+            <div class="home-slider-image">
+              <img src="assets/images/home-img-3.png" alt="" />
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="content">
+              <h1 class="heading">Bizim dadlı təamlar</h1>
+              <h3 class="sub-heading">Ədviyyatlı təamlar</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Error at nemo libero. Praesentium, dolores? Non totam quas
+                illo ipsa, quidem, possimus optio quaerat suscipit magni
+                molestiae ab maiores illum ea.
+              </p>
+              <a href="#order" class="btn">Sifariş ver</a>
+            </div>
+            <div class="home-slider-image">
+              <img src="assets/images/home-img-1.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <section class="dishes-section" id="dishes">
+    <div class="container">
+      <h2 class="sub-heading">Our Dishes</h2>
+      <h1 class="heading">Popular Dishes</h1>
+      <div class="meal-cards-gallery">
+        <div class="meal-card">
+          <a href="" class="fa-solid fa-heart"></a>
+          <a href="" class="fa-solid fa-eye"></a>
+          <img src="./assets/images/dish-1.png" alt="" />
+          <h2 class="card-heading">Nəfis Yemək</h2>
+
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <div class="card-order">
+            <span>15.99 ₼</span>
+            <a href="#" class="btn">Karta əlavə et</a>
+          </div>
+        </div>
+        <div class="meal-card">
+          <a href="" class="fa-solid fa-heart"></a>
+          <a href="" class="fa-solid fa-eye"></a>
+          <img src="./assets/images/dish-2.png" alt="" />
+          <h2 class="card-heading">Nəfis Yemək</h2>
+
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <div class="card-order">
+            <span>15.99 ₼</span>
+            <a href="#" class="btn">Karta əlavə et</a>
+          </div>
+        </div>
+        <div class="meal-card">
+          <a href="" class="fa-solid fa-heart"></a>
+          <a href="" class="fa-solid fa-eye"></a>
+          <img src="./assets/images/dish-3.png" alt="" />
+          <h2 class="card-heading">Nəfis Yemək</h2>
+
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <div class="card-order">
+            <span>15.99 ₼</span>
+            <a href="#" class="btn">Karta əlavə et</a>
+          </div>
+        </div>
+        <div class="meal-card">
+          <a href="" class="fa-solid fa-heart"></a>
+          <a href="" class="fa-solid fa-eye"></a>
+          <img src="./assets/images/dish-4.png" alt="" />
+          <h2 class="card-heading">Nəfis Yemək</h2>
+
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <div class="card-order">
+            <span>15.99 ₼</span>
+            <a href="#" class="btn">Karta əlavə et</a>
+          </div>
+        </div>
+        <div class="meal-card">
+          <a href="" class="fa-solid fa-heart"></a>
+          <a href="" class="fa-solid fa-eye"></a>
+          <img src="./assets/images/dish-5.png" alt="" />
+          <h2 class="card-heading">Nəfis Yemək</h2>
+
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <div class="card-order">
+            <span>15.99 ₼</span>
+            <a href="#" class="btn">Karta əlavə et</a>
+          </div>
+        </div>
+        <div class="meal-card">
+          <a href="" class="fa-solid fa-heart"></a>
+          <a href="" class="fa-solid fa-eye"></a>
+          <img src="./assets/images/dish-6.png" alt="" />
+          <h2 class="card-heading">Nəfis Yemək</h2>
+
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <div class="card-order">
+            <span>15.99 ₼</span>
+            <a href="#" class="btn">Karta əlavə et</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about-section" id="about">
+    <div class="container">
+      <h2 class="sub-heading">Haqqımızda</h2>
+      <h1 class="heading">Nİyə bİz?</h1>
+      <div class="about-section-content">
+        <div class="about-section-left">
+          <img src="assets/images/about-img.png" alt="" />
+        </div>
+        <div class="about-section-right">
+          <h1 class="heading">Ölkədəkİ ən dadlı yemək!</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatem ratione quia corrupti consequuntur maiores doloribus?
+            Nihil, dignissimos veniam inventore quia nesciunt, voluptatem
+            obcaecati magnam natus nostrum dolore animi dolorem accusamus
+            expedita neque eum quas explicabo consequuntur! Iste, praesentium
+            odio aperiam sequi ea quia suscipit? Ad reprehenderit pariatur
+            veniam molestiae eaque.
+          </p>
+          <div class="about-features">
+            <span><i class="fa-solid fa-truck" style="color: #27ae60"></i>
+              Pulsuz Çatdırılma
+            </span>
+            <span><i class="fa-solid fa-comment-dollar" style="color: #27ea60"></i>
+              Asan Ödəmə</span>
+            <span><i class="fa-solid fa-headset" style="color: #24ea60"></i>24/7
+              Xidmət</span>
+          </div>
+          <a href="#" class="btn">Daha çox</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <h2 class="sub-heading">Menyu</h2>
+      <h1 class="heading">Yeməklərİmİz</h1>
+      <div class="meal-cards-gallery">
+        <div class="meal-card">
+          <a href="" class="fa-solid fa-heart"></a>
+          <img src="assets/images/menu-1.jpg" alt="" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h2 class="card-heading">Nəfis Yemək</h2>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur similique aut nisi magni tempore, saepe repudiandae
+            vitae optio corporis odio.
+          </p>
+          <div class="card-order">
+            <span>12.99 ₼</span>
+            <a href="#" class="btn">Karta əlavə et</a>
+          </div>
+        </div>
+        <div class="meal-card">
+          <a href="" class="fa-solid fa-heart"></a>
+          <img src="assets/images/menu-2.jpg" alt="" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h2 class="card-heading">Nəfis Yemək</h2>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur similique aut nisi magni tempore, saepe repudiandae
+            vitae optio corporis odio.
+          </p>
+          <div class="card-order">
+            <span>12.99 ₼</span>
+            <a href="#" class="btn">Karta əlavə et</a>
+          </div>
+        </div>
+        <div class="meal-card">
+          <a href="" class="fa-solid fa-heart"></a>
+          <img src="assets/images/menu-3.jpg" alt="" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h2 class="card-heading">Nəfis Yemək</h2>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur similique aut nisi magni tempore, saepe repudiandae
+            vitae optio corporis odio.
+          </p>
+          <div class="card-order">
+            <span>12.99 ₼</span>
+            <a href="#" class="btn">Karta əlavə et</a>
+          </div>
+        </div>
+        <div class="meal-card">
+          <a href="" class="fa-solid fa-heart"></a>
+          <img src="assets/images/menu-4.jpg" alt="" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h2 class="card-heading">Nəfis Yemək</h2>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur similique aut nisi magni tempore, saepe repudiandae
+            vitae optio corporis odio.
+          </p>
+          <div class="card-order">
+            <span>12.99 ₼</span>
+            <a href="#" class="btn">Karta əlavə et</a>
+          </div>
+        </div>
+        <div class="meal-card">
+          <a href="" class="fa-solid fa-heart"></a>
+          <img src="assets/images/menu-5.jpg" alt="" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h2 class="card-heading">Nəfis Yemək</h2>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur similique aut nisi magni tempore, saepe repudiandae
+            vitae optio corporis odio.
+          </p>
+          <div class="card-order">
+            <span>12.99 ₼</span>
+            <a href="#" class="btn">Karta əlavə et</a>
+          </div>
+        </div>
+        <div class="meal-card">
+          <a href="" class="fa-solid fa-heart"></a>
+          <img src="assets/images/menu-7.jpg" alt="" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h2 class="card-heading">Nəfis Yemək</h2>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur similique aut nisi magni tempore, saepe repudiandae
+            vitae optio corporis odio.
+          </p>
+          <div class="card-order">
+            <span>12.99 ₼</span>
+            <a href="#" class="btn">Karta əlavə et</a>
+          </div>
+        </div>
+        <div class="meal-card">
+          <a href="" class="fa-solid fa-heart"></a>
+          <img src="assets/images/menu-8.jpg" alt="" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h2 class="card-heading">Nəfis Yemək</h2>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur similique aut nisi magni tempore, saepe repudiandae
+            vitae optio corporis odio.
+          </p>
+          <div class="card-order">
+            <span>12.99 ₼</span>
+            <a href="#" class="btn">Karta əlavə et</a>
+          </div>
+        </div>
+        <div class="meal-card">
+          <a href="" class="fa-solid fa-heart"></a>
+          <img src="assets/images/menu-9.jpg" alt="" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h2 class="card-heading">Nəfis Yemək</h2>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur similique aut nisi magni tempore, saepe repudiandae
+            vitae optio corporis odio.
+          </p>
+          <div class="card-order">
+            <span>12.99 ₼</span>
+            <a href="#" class="btn">Karta əlavə et</a>
+          </div>
+        </div>
+        <div class="meal-card">
+          <a href="" class="fa-solid fa-heart"></a>
+          <img src="assets/images/menu-6.jpg" alt="" />
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <h2 class="card-heading">Nəfis Yemək</h2>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur similique aut nisi magni tempore, saepe repudiandae
+            vitae optio corporis odio.
+          </p>
+          <div class="card-order">
+            <span>12.99 ₼</span>
+            <a href="#" class="btn">Karta əlavə et</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="review-section" id="review">
+    <div class="container">
+      <h2 class="sub-heading">Müştəri Rəyləri</h2>
+      <h1 class="heading">Sİzlərdən Gələnlər</h1>
+      <div class="swiper review-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+  </section>
+  <section class="order-section" id="order">
+    <div class="container">
+      <h2 class="sub-heading">sifariş et</h2>
+      <h1 class="heading">pulsuz və sürətlİ</h1>
+      <div class="order-form-card">
+        <form id="orderForm" class="form-container">
+          <div class="left-column">
+            <label for="name">Adınız:</label>
+            <input type="text" id="name" name="name" required>
+            <span id="nameError" class="error-message"></span>
+
+            <label for="order">Sifarişiniz:</label>
+            <input type="text" id="order" name="order" required>
+            <span id="orderError" class="error-message"></span>
+
+            <label for="amount">Nə qədər:</label>
+            <input type="number" id="amount" name="amount" required>
+            <span id="orderError" class="error-message"></span>
+
+            <label for="address">Ünvanınız:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+            <span id="addressError" class="error-message"></span>
+
+            
+
+          </div>
+
+          <div class="right-column">
+            <label for="number">Nömrəniz:</label>
+            <input type="tel" id="number" name="number" placeholder="+994" required>
+            <span id="numberError" class="error-message"></span>
+
+            <label for="additionalFood">Əlavə sifariş</label>
+            <input type="text" id="additionalFood" name="additionalFood">
+
+            <label for="dateTime">Tarix:</label>
+            <input type="datetime-local" id="dateTime" name="dateTime" required>
+            <span id="dateTimeError" class="error-message"></span>
+
+            <label for="message">Mesajınız:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+            <span id="messageError" class="error-message"></span>
+
+            <button type="submit" class="btn">Göndər</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="upper-footer">
+      <div class="footer-links-row">
+        <h2 class="footer-row-heading">Yerlər</h2>
+        <a href="#">Hindistan</a>
+        <a href="#">Yaponiya</a>
+        <a href="#">Rusiya</a>
+        <a href="#">ABŞ</a>
+        <a href="#">Fransa</a>
+      </div>
+      <div class="footer-links-row">
+        <h2 class="footer-row-heading">Sürətli Keçid</h2>
+        <a href="#home">Home</a>
+        <a href="#dishes">Dishes</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#review">Review</a>
+        <a href="#order">Order</a>
+      </div>
+      <div class="footer-links-row">
+        <h2 class="footer-row-heading">Əlaqə</h2>
+        <a href="tel:+123-456-7890">+123-456-7890</a>
+        <a href="tel:+111-222-3333">+111-222-3333</a>
+        <a href="mailto:Aliyarlisahin1958@gmail.com" style="text-transform: none;">Aliyarlisahin1958@gmail.com</a>
+        <p>Baku, Azerbaijan - AZ1005</p>
+      </div>
+      <div class="footer-links-row">
+        <h2 class="footer-row-heading">Bizi İzləyin</h2>
+
+        <a href="https://www.facebook.com/">Facebook</a>
+        <a href="https://twitter.com/?lang=en">Twitter</a>
+        <a href="https://www.instagram.com/">Instagram</a>
+        <a href="https://www.linkedin.com/">LinkedIn</a>
+      </div>
+    </div>
+    <div class="lower-footer">
+      <p>Copyright @ 2023 By <a href="https://www.linkedin.com/in/sliyarli/">Aliyarli Shahin</a></p>
+    </div>
+  </footer>
+  loader part
+  <div class="loader-container">
+    <img src="assets/loader.gif" alt="">
+  </div>
+
+  <!-- swiper js paketinin js kodlari -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- email js paketinin js kodlari -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <!-- sweet alert js kodlari -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- saytin js faylinin importu -->
+  <script src="script.js"></script>
+</body>
+
+</html>
